@@ -69,4 +69,9 @@ It is very important to make sure that the input data is formatted correctly. Ta
 - Consistent capitalization or abbreviations
 - Name/Number must exactly match when used in Incompatables
 
-The weights of each variable can be adjusted within the document if desired. 
+The weights of each variable can be adjusted within the document if desired.
+
+**TODO:**
+- Add ability to include nonbinary genders
+- Improve algorithm to account for those with multiple ethnicities (currently would percieve an individual with two ethnicities listed as their own unique ethnicity rather than including both)
+- Develop way to account for when number of individuals is not divisible by group size
