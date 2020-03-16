@@ -18,8 +18,8 @@ num_plot = 131
 num_iterations = 1
 max_samples = int(3e3)  # How many iterations to run the algorithm for (500-5000 works best)
 costThreshold = 1950    # Experiement with different threshold values depending on weights used
+name_of_excel = "exampleList"
 current_directory = os.getcwd()
-dataPath = os.path.join(current_directory, 'exampleList.xlsx') #default path
 excelOut = os.path.join(current_directory, 'Sorted_Output.xlsx') # Path of the Excel sheet that we're outputting data to
 
 #these can be modified by hand or a program could be written to modify and test for best outcome
@@ -570,8 +570,9 @@ try:
 except FileNotFoundError:
     pass
 
-#name_of_excel, size_of_group, max_samples, num_iterations = inputData.askForInput()
-#dataPath = os.path.join(current_directory, f"{name_of_excel}.xlsx") #default path
+name_of_excel, size_of_group, max_samples, num_iterations = inputData.askForInput(name_of_excel, size_of_group, max_samples, num_iterations)
+print(name_of_excel, size_of_group, max_samples, num_iterations)
+dataPath = os.path.join(current_directory, f"{name_of_excel}.xlsx") #default path
 
 data = pd.read_excel(dataPath)
 
@@ -612,9 +613,6 @@ for var in columns:
     if any(word in var for word in ["Available", "available", "availability", "Availability"]):
         variables.append("availability")
         var_dict["availability"] = var
-
-
-
 
 run()
 

@@ -7,12 +7,12 @@ This program allows you to sort individuals into intentionally diverse groups ba
     numpy
     pandas
     openpyxl
-    
-    
-    
+
+
+
 # How to Use
 
-Add your excel file, which must be formatted as detaliled below. 
+Add your excel file, which must be formatted as detaliled below.
 After installing the neccesary dependencies, the file can be run by navigating to the folder and running:
 ```
 python3 sort.py
@@ -27,13 +27,13 @@ python3 sort.py
 
 Example:
 
-| Name  | Gender | Ethnicity | Majors | 
+| Name  | Gender | Ethnicity | Majors |
 | ------------- | -------------
 | 123  | F | Caucasian, Hispanic | Computer Science, Economics |
 | 124  | M | Chinese | English, PWAD |
 | ... | ... | ... | ... |
 
-The top row of the table, of course, should be the headers. The Name/Number must be the first column followed by any number of headers. 
+The top row of the table, of course, should be the headers. The Name/Number must be the first column followed by any number of headers.
 
 ### Headers
 Here are the possible headers and their respective functions:
@@ -53,7 +53,7 @@ Here are the possible headers and their respective functions:
 
 - **"School" or "High School"**: the program will not allow two students from the same school to be in the same group
 - **"Availability" or "Available"**: this allows to check to see if all members of a group have at least one time when they are all available. The data should be in the form of a list of "T" or "F". For example, if a indivdual is avaialable for only the first three time slots, their corresponding cell would be "T, T, T, F, F"
-- **"Roommates" or "Incompatable"**: this ensures that no two incompatible members are in the same group. The data should be in the form of names or numbers seperated be commas. For example, if an indivudal was incomptable with two people with the numbers 123 and 124, they're cell would be "123, 124". 
+- **"Roommates" or "Incompatable"**: this ensures that no two incompatible members are in the same group. The data should be in the form of names or numbers seperated be commas. For example, if an indivudal was incomptable with two people with the numbers 123 and 124, they're cell would be "123, 124".
 
 ### Notes:
 It is very important to make sure that the input data is formatted correctly. Take care to check the following to avoid possible issues:
