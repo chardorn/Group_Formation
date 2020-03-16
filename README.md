@@ -1,23 +1,15 @@
-# Group_Formation
+# Group Formation
 This program allows you to sort individuals into intentionally diverse groups based on certain traits. 
 
 As input, it takes an excel spreadsheet preformatted as specified below.
 As output, it produces another excel, titled Sorted_Output with groups. 
 The parameters (and defaults) are the name of the excel (exampleList.xlsx), group size (5), max # of swaps per iteration (500), and the number of iterations (3). 
-
-# Prerequisites:
-- [Python3](https://www.python.org/downloads/)
-- Packages:
-    - numpy
-    - pandas
-    - openpyxl
-    
-    
     
 # How to Use
 
-Add your excel file, which must be formatted as detaliled below. The name should not contain any spaces to avoid error. 
-After installing the neccesary dependencies, the file can be run by navigating to the folder and running:
+Download or clone this repository onto your computer. 
+Add your excel file to the Group_Formation folder, and ensure that it is formatted as detaliled below. The name of the excel should not contain any spaces to avoid error. 
+After installing the neccesary dependencies (listed below), the file can be run by navigating to the folder and running:
 ```
 python3 sort.py
 ```
@@ -29,6 +21,15 @@ Input size of group:
 Number of swaps per iterations (default: 500): 
 Input the number of iterations (default: 3): 
 ```
+
+# System Prerequisites:
+- [Python3](https://www.python.org/downloads/)
+- Packages:
+    - numpy
+    - pandas
+    - openpyxl
+    - matplotlib.pyplot
+    
 
 # Format Excel Data
 
@@ -67,3 +68,5 @@ It is very important to make sure that the input data is formatted correctly. Ta
 - No extranesous space before or after a word
 - Consistent capitalization or abbreviations
 - Name/Number must exactly match when used in Incompatables
+
+The weights of each variable can be adjusted within the document if desired. 
