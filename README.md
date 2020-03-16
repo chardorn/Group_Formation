@@ -1,18 +1,22 @@
 # Group_Formation
-This program allows you to sort individuals into intentionally diverse groups based on certain traits
+This program allows you to sort individuals into intentionally diverse groups based on certain traits. 
+
+As input, it takes an excel spreadsheet preformatted as specified below.
+As output, it produces another excel, titled Sorted_Output with groups. 
+The parameters (and defaults) are the name of the excel (exampleList.xlsx), group size (5), max # of swaps per iteration (500), and the number of iterations (3). 
 
 # Prerequisites:
 - [Python3](https://www.python.org/downloads/)
 - Packages:
-    numpy
-    pandas
-    openpyxl
+    - numpy
+    - pandas
+    - openpyxl
     
     
     
 # How to Use
 
-Add your excel file, which must be formatted as detaliled below. 
+Add your excel file, which must be formatted as detaliled below. The name should not contain any spaces to avoid error. 
 After installing the neccesary dependencies, the file can be run by navigating to the folder and running:
 ```
 python3 sort.py
@@ -20,18 +24,21 @@ python3 sort.py
 Then the following should pop up (one at a time) and you should input a numerical value and hit enter.
 
 ```
-python3 sort.py
+Input the name of the excel (without .xlsx ending): 
+Input size of group: 
+Number of swaps per iterations (default: 500): 
+Input the number of iterations (default: 3): 
 ```
 
 # Format Excel Data
 
 Example:
 
-| Name  | Gender | Ethnicity | Majors | 
-| ------------- | -------------
-| 123  | F | Caucasian, Hispanic | Computer Science, Economics |
-| 124  | M | Chinese | English, PWAD |
-| ... | ... | ... | ... |
+| Number | Gender | Ethnicity | Residency | Majors                      | Availability | Roommates      |
+|--------|--------|-----------|-----------|-----------------------------|--------------|----------------|
+| 123    | F      | Hispanic  | IS        | Computer Science, Economics | T, T, F      | 126, 131       |
+| 124    | M      | White     | OOS       | English, PWAD               | T, T, T      |                |
+| ...    | ...    | ...       | ...       | ...                         | ...          | ...            |
 
 The top row of the table, of course, should be the headers. The Name/Number must be the first column followed by any number of headers. 
 
